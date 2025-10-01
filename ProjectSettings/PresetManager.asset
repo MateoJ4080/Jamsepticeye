@@ -4,4 +4,42 @@
 PresetManager:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_DefaultPresets: {}
+  m_DefaultPresets:
+  - first:
+      m_NativeTypeID: 1020
+      m_ManagedTypePPtr: {fileID: 0}
+      m_ManagedTypeFallback: 
+    second:
+    - m_Preset: {fileID: 2655988077585873504, guid: 7e0fd15dd18bb594d867111aa604432f, type: 2}
+      m_Filter: 
+      m_Disabled: 0
+  - first:
+      m_NativeTypeID: 1127
+      m_ManagedTypePPtr: {fileID: 0}
+      m_ManagedTypeFallback: 
+    second:
+    - m_Preset: {fileID: 2655988077585873504, guid: 8e0c2d643009b3c4db1a604c2095d9a0, type: 2}
+      m_Filter: 
+      m_Disabled: 0
+  - first:
+      m_NativeTypeID: 1006
+      m_ManagedTypePPtr: {fileID: 0}
+      m_ManagedTypeFallback: 
+    second:
+    - m_Preset: {fileID: 2655988077585873504, guid: 37cfe5d2d51515f40b717d0260e72f7d, type: 2}
+      m_Filter: 
+      m_Disabled: 0
+    - m_Preset: {fileID: 2655988077585873504, guid: afb26fb8dc5f62f46ae363d741918845, type: 2}
+      m_Filter: '*Normal*'
+      m_Disabled: 0
+    - m_Preset: {fileID: 2655988077585873504, guid: e583d001897c792469708fe37d33d457, type: 2}
+      m_Filter: glob:"Sprites/**"
+      m_Disabled: 0
+  - first:
+      m_NativeTypeID: 1041
+      m_ManagedTypePPtr: {fileID: 0}
+      m_ManagedTypeFallback: 
+    second:
+    - m_Preset: {fileID: 2655988077585873504, guid: b99df73660a05744ea3baf84e3d41a50, type: 2}
+      m_Filter: 
+      m_Disabled: 0
