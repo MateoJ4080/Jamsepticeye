@@ -16,6 +16,13 @@
       },
       "hash": "8c7e2e52a86580c990e1581003e837583b0b0e2f"
     },
+    "com.generalisk.clean-build": {
+      "version": "https://github.com/Generalisk/Unity-CleanBuild.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b6d70d2c63cc12961cf57ab7e04ac91e6d8e802a"
+    },
     "com.seaeees.simple-folder-icon": {
       "version": "https://github.com/SeaeeesSan/SimpleFolderIcon.git?path=Packages/com.seaeees.simple-folder-icon",
       "depth": 0,
