@@ -369,23 +369,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 916e66b827a16e14781c7e55bda33fae, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.016776372
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 916e66b827a16e14781c7e55bda33fae, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.96126175
+      value: 0.96111536
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 916e66b827a16e14781c7e55bda33fae, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.27563733
+      value: -0.27559534
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 916e66b827a16e14781c7e55bda33fae, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.0048105465
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 916e66b827a16e14781c7e55bda33fae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 916e66b827a16e14781c7e55bda33fae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuEyeball
   intensity: 0.5
-  offset: {x: 180, y: 0, z: 0}
+  offset: {x: 178, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
