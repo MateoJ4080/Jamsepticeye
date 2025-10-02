@@ -147,10 +147,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e172896c63578fb4d92b7271d720f213, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6ce3841aaeb784444b7bcad0d4e01b4a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1.32
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -7207,7 +7207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Credits
   creditsObj: {fileID: 677251020}
   music: {fileID: 7424396}
-  endTimeMargin: 4.5
+  endTimeMargin: 1
 --- !u!1 &1637844271
 GameObject:
   m_ObjectHideFlags: 0
