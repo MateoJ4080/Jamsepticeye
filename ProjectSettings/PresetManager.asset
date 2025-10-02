@@ -13,6 +13,9 @@ PresetManager:
     - m_Preset: {fileID: 2655988077585873504, guid: 7e0fd15dd18bb594d867111aa604432f, type: 2}
       m_Filter: 
       m_Disabled: 0
+    - m_Preset: {fileID: 2655988077585873504, guid: 3d97c4d341fcbe643bf81868146878f0, type: 2}
+      m_Filter: glob:"Audio/Music/**"
+      m_Disabled: 0
   - first:
       m_NativeTypeID: 1127
       m_ManagedTypePPtr: {fileID: 0}
