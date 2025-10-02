@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class MenuEyeball : MonoBehaviour
 {
+    public float intensity = 1;
     public Vector3 offset;
     private Vector3 forward;
 
@@ -12,7 +13,7 @@ public class MenuEyeball : MonoBehaviour
     {
         var rawCursorPos = Mouse.current.position;
         Vector3 cursorPos = rawCursorPos.ReadValue();
-        cursorPos.z = 0.5f;
+        cursorPos.z = intensity;
         var cursorPosWorld = Camera.main.ScreenToWorldPoint(cursorPos);
         transform.LookAt(cursorPosWorld);
         transform.Rotate(forward - offset);
