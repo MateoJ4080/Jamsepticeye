@@ -6,6 +6,8 @@ public class EnemyAI : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Transform player;
+    public GameObject keyPrefab;
+    public bool dropsKey;
 
     [Header("Detection")]
     [SerializeField] private float detectionRange = 5f;

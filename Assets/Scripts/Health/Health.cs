@@ -27,8 +27,17 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        if (gameObject.GetComponent<EnemyAI>() != null)
+        if (gameObject.TryGetComponent(out EnemyAI enemy))
         {
+            if (enemy.dropsKey)
+            {
+                Collider enemyCollider = GetComponent<Collider>();
+                Collider keyCollider = enemy.keyPrefab.GetComponent<Collider>();
+                float dropPosY = enemyCollider.bounds.center.y - enemyCollider.bounds.size.y / 2 + keyCollider.bounds.size.y / 2;
+
+                Vector3 spawnPos = new(transform.position.x, dropPosY, transform.position.z);
+                Instantiate(enemy.keyPrefab, spawnPos, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
 
