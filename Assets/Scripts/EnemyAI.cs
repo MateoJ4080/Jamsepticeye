@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Combat")]
     [SerializeField] private float attackCooldown = 1f;
-    [SerializeField] private int attackDamage = 10;
+    [SerializeField] private int attackDamage = 1;
 
     private NavMeshAgent agent;
     private float lastAttackTime;
@@ -103,7 +103,10 @@ public class EnemyAI : MonoBehaviour
 
     void PerformAttack()
     {
-        Debug.Log("Attacking");
+        if (player.TryGetComponent<Health>(out var playerHealth))
+        {
+            playerHealth.TakeDamage(attackDamage);
+        }
     }
 
     void TransitionToIdle()

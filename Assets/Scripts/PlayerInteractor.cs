@@ -30,10 +30,7 @@ public class PlayerInteraction : MonoBehaviour
         DetectInteractables();
     }
 
-    private void OnInteract(InputAction.CallbackContext callbackContext)
-    {
-        closestInteractable?.Interact();
-    }
+    private void OnInteract(InputAction.CallbackContext callbackContext) => closestInteractable?.Interact();
 
     private void DetectInteractables()
     {
@@ -59,8 +56,8 @@ public class PlayerInteraction : MonoBehaviour
         // This is where the outline enabling should be placed (after iterating all objects and defining the closest to the player)
 
         // Debug
-        MonoBehaviour mb = closestInteractable as MonoBehaviour;
-        if (mb != null) Debug.Log("Closest interactable: " + mb.gameObject.name);
+        // MonoBehaviour mb = closestInteractable as MonoBehaviour;
+        // if (mb != null) Debug.Log("Closest interactable: " + mb.gameObject.name);
     }
 
     private void OnDrawGizmosSelected()
