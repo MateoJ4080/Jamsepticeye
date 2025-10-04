@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Box : MonoBehaviour, IInteractable
+public class BoxInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private Vector3 targetPos;
     [SerializeField] private float duration;
