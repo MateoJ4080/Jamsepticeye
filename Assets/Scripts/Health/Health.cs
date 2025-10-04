@@ -44,7 +44,7 @@ public class Health : MonoBehaviour
         if (gameObject.GetComponent<PlayerController>() != null)
         {
             // animator.SetTrigger("Dead");
-            // Leave body in the floor
+            // Leave body on the floor
             Debug.Log("[Health] PLAYER DIED");
         }
     }
