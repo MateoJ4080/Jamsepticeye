@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteractor : MonoBehaviour
 {
     [SerializeField] private float interactRadius = 2f;
     [SerializeField] private LayerMask interactableLayer;

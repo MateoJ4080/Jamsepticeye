@@ -9,10 +9,12 @@ public class DoorInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        Debug.Log("Interacted");
         Vector3 playerPos = player.transform.position;
 
-        if (gameObject.CompareTag("DoorToHallway") && GameManager.Instance.r1_hasKeyToHallway == true)
+        if (gameObject.CompareTag("DoorToFirstHallway") || gameObject.CompareTag("DoorToSecondHallway") && GameManager.Instance.r1_hasKeyToHallway == true)
         {
+            Debug.Log("DoorHallway");
             // CLEAN LATER IF POSSIBLE (method in PlayerController doing exactly the same)
             CharacterController cc = player.GetComponent<CharacterController>();
             cc.enabled = false;
