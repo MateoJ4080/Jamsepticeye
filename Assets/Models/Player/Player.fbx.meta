@@ -3,7 +3,42 @@ guid: d3be6573e18d3f049bcee50e2d26f892
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hair
+    second: {fileID: 2100000, guid: 298ef5021ae468f41af184b079bc607e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: jacket
+    second: {fileID: 2100000, guid: 54a631ad53c0137489336fd802eac008, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pants
+    second: {fileID: 2100000, guid: 6f645b00940cd2641910d46dcca38796, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shadows
+    second: {fileID: 2100000, guid: f76eca38cd42fcf4790cf83a0f93a757, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin
+    second: {fileID: 2100000, guid: af8d320f57dce95488cc04e1d5c0a8f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: socks
+    second: {fileID: 2100000, guid: 9ba3b9264da144047b81135ec2ad5f73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: straps
+    second: {fileID: 2100000, guid: 8a47dece03c275b4283f81770a360de4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
