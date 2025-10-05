@@ -57,4 +57,9 @@ public class CameraController : MonoBehaviour
             }
         }
     }
+
+    public void TeleportToX(float value)
+    {
+        transform.position = new(value, transform.position.y, transform.position.z);
+    }
 }
