@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         // animator.SetTrigger("Attack");
 
+        // if (canAttack)
         Vector3 center = transform.position + transform.forward * attackRange / 2f;
         float radius = attackRange / 2f;
 
