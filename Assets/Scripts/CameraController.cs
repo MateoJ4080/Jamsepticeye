@@ -19,9 +19,14 @@ public class CameraController : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    void Start()
+    private void Start()
     {
         RoomManager.Instance.OnRoomChanged += HandleRoomChanged;
+    }
+
+    public void HandleRoomChanged(Room room)
+    {
+        targetRoom = room;
     }
 
     void Update()
@@ -51,15 +56,5 @@ public class CameraController : MonoBehaviour
                 isMoving = false;
             }
         }
-    }
-
-    public void HandleRoomChanged(Room room)
-    {
-        targetRoom = room;
-    }
-
-    public void TeleportToX(float value)
-    {
-        transform.position = new(value, transform.position.y, transform.position.z);
     }
 }

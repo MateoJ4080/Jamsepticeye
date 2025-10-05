@@ -4,7 +4,7 @@ public class KeyInteractable : MonoBehaviour, IInteractable
 {
     public void Interact()
     {
-        GameManager.Instance.r3_hasKeyToOutside = true;
+        GameManager.Instance.r1_hasOutsideKey = true;
         Destroy(gameObject);
     }
 }
