@@ -58,7 +58,7 @@ public class SanityUI : MonoBehaviour
             MediumCrack.SetActive(true);
             LowCrack.SetActive(false);
             BloodAni.SetActive(false);
-            TargetPos = StartPos + new Vector2(0, -50);
+            TargetPos = StartPos + new Vector2(0, -40);
             TargetColor = MediumColor;
         }
         else if (SS.currentState == SanitySystem.SanityState.Low)
@@ -66,7 +66,7 @@ public class SanityUI : MonoBehaviour
             MediumCrack.SetActive(false);
             LowCrack.SetActive(true);
             BloodAni.SetActive(true);
-            TargetPos = StartPos + new Vector2(0, -95);
+            TargetPos = StartPos + new Vector2(0, -80);
             TargetColor = LowColor;
         }
     }
