@@ -27,13 +27,9 @@ public class DoorInteractable : MonoBehaviour, IInteractable
         }
 
 
-        if (gameObject.CompareTag("DoorToOutside"))
+        if (gameObject.CompareTag("DoorToOutside") && GameManager.Instance.r3_hasKeyToOutside)
         {
-            if (GameManager.Instance.r3_hasKeyToOutside)
-            {
-                SceneManager.LoadScene("Credits");
-            }
-            else Debug.Log("You don't have the key!");
+            if (GameManager.Instance.r3_hasKeyToOutside) SceneManager.LoadScene("Credits");
         }
     }
 }

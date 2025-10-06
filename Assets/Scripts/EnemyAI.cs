@@ -83,7 +83,6 @@ public class EnemyAI : MonoBehaviour
 
     void HandleAttack(float distance)
     {
-        Debug.Log("HandleAttack");
         LookAtPlayer();
 
         if (Time.time - lastAttackTime >= attackCooldown)
@@ -106,10 +105,8 @@ public class EnemyAI : MonoBehaviour
 
     void PerformAttack()
     {
-        Debug.Log("PerformAttack");
         if (player.TryGetComponent<Health>(out var playerHealth))
         {
-            Debug.Log("Health Component");
             playerHealth.TakeDamage(attackDamage);
         }
     }

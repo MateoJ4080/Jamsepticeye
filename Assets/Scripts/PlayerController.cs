@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private int attackDamage = 1;
     [SerializeField] private LayerMask enemyLayer;
-    private bool canAttack;
 
     private Vector2 moveInput;
     private Vector2 currentInput;
     private Vector2 inputVelocity;
     private Quaternion lastRotation;
+    private bool canAttack;
 
     private void Awake()
     {
