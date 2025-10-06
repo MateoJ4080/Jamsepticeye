@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
-using UnityEngine.Windows;
 using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
