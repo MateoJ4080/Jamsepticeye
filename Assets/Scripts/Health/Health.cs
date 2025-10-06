@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class Health : MonoBehaviour
         {
             // animator.SetTrigger("Dead");
             // Leave body on the floor
+            SceneManager.LoadScene("Level");
             StartCoroutine(AudioManager.Instance.PlaySFXAndWait(AudioManager.Instance.SFX_PlayerDeath));
             Debug.Log("[Health] PLAYER DIED");
         }
