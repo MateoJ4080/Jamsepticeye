@@ -21,7 +21,14 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
         Debug.Log($"{gameObject.name} DAMAGED. HP: {currentHealth}");
 
+        if (gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player recieved dmg");
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_PlayerTakeDmg);
+        }
+
         if (currentHealth <= 0) Die();
+
         OnHealthChanged?.Invoke();
     }
 
@@ -45,6 +52,7 @@ public class Health : MonoBehaviour
         {
             // animator.SetTrigger("Dead");
             // Leave body on the floor
+            StartCoroutine(AudioManager.Instance.PlaySFXAndWait(AudioManager.Instance.SFX_PlayerDeath));
             Debug.Log("[Health] PLAYER DIED");
         }
     }
