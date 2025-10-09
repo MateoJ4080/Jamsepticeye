@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2941015481043832471, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: attackRange
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2941015481043832471, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: attackCooldown
@@ -2946,7 +2946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1433188398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4086,7 +4086,7 @@ Transform:
   m_GameObject: {fileID: 1765771859}
   serializedVersion: 2
   m_LocalRotation: {x: 0.07113, y: -0, z: -0, w: 0.99746704}
-  m_LocalPosition: {x: -1.34641, y: 0.77229, z: -7.5281196}
+  m_LocalPosition: {x: -1.2, y: 0.77229, z: -7.5281196}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4119,7 +4119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _PixelationFactor: 0.5
-  _ColorEmulationMode: 2
+  _ColorEmulationMode: 1
   _FullscreenColorDepth: {x: 256, y: 256, z: 256}
   _FullscreenDitherDepth: {x: 100, y: 100, z: 100}
   _DitheringMatrixSize: 2

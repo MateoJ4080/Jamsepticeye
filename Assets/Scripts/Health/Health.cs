@@ -51,10 +51,12 @@ public class Health : MonoBehaviour
 
         if (gameObject.GetComponent<PlayerController>() != null)
         {
+
+
             // animator.SetTrigger("Dead");
             // Leave body on the floor
-            SceneManager.LoadScene("Level");
             StartCoroutine(AudioManager.Instance.PlaySFXAndWait(AudioManager.Instance.SFX_PlayerDeath));
+            SceneManager.LoadScene("Level");
             Debug.Log("[Health] PLAYER DIED");
         }
     }

@@ -14,6 +14,8 @@ public class DoorInteractable : MonoBehaviour, IInteractable
 
         if (gameObject.CompareTag("DoorToFirstHallway") || gameObject.CompareTag("DoorToSecondHallway") && GameManager.Instance.r1_hasKeyToHallway == true)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_DoorUnlock);
+
             Debug.Log("DoorHallway");
             // CLEAN LATER IF POSSIBLE (method in PlayerController doing exactly the same)
             CharacterController cc = player.GetComponent<CharacterController>();
