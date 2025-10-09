@@ -3805,6 +3805,55 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1736946963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736946965}
+  - component: {fileID: 1736946964}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1736946964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736946963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5cf8a3e23a92b438ba85868a6502a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  sfxSource: {fileID: 0}
+  SFX_DoorUnlock: {fileID: 8300000, guid: c2389c79ee5431f4ea6d5f635f7b7c68, type: 3}
+  SFX_KeyGrab: {fileID: 8300000, guid: f6e38321d7c20044e85dd0a6271d4add, type: 3}
+  SFX_PlayerDeath: {fileID: 8300000, guid: c5b274953efaa0b4eb5657ff8803b9cf, type: 3}
+  SFX_PlayerTakeDmg: {fileID: 8300000, guid: 56fba9bc9d24716429ca9bad8fba7765, type: 3}
+--- !u!4 &1736946965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736946963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.62597, y: 2.91703, z: -7.53896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1740012314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5393,3 +5442,4 @@ SceneRoots:
   - {fileID: 738511039}
   - {fileID: 167615960}
   - {fileID: 427191656}
+  - {fileID: 1736946965}

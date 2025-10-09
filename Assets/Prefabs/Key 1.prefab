@@ -14,23 +14,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2968216
+      value: 1.2481575
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.213784
+      value: -6.037855
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.0000015497205
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       propertyPath: m_LocalRotation.z
@@ -66,28 +66,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 4006561827844159992}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 5566599518631416527}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4006561827844159992}
+      addedObject: {fileID: -1784993379580027887}
   m_SourcePrefab: {fileID: 100100000, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
 --- !u!1 &145833660237400195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 31edc698e752ebd42a9466f32d205c72, type: 3}
   m_PrefabInstance: {fileID: 1064946422982637010}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5566599518631416527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145833660237400195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ee71bff191b2549b48b74934ad8973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyInteractable
 --- !u!65 &4006561827844159992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103,9 +94,34 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0015412665, y: 0.0028139171, z: 0.0001318596}
-  m_Center: {x: -6.9849193e-10, y: -0.00063632545, z: -0.0011229679}
+  m_Size: {x: 0.0065350723, y: 0.003943986, z: 0.0032817214}
+  m_Center: {x: -0.00006669998, y: -0.00007128909, z: 0.0004519683}
+--- !u!114 &5566599518631416527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145833660237400195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ee71bff191b2549b48b74934ad8973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyInteractable
+--- !u!114 &-1784993379580027887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145833660237400195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c371b906311566b4ba77b343842dd8a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateLoopY
+  speed: 70
