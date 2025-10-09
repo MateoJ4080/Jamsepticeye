@@ -4121,7 +4121,7 @@ MonoBehaviour:
   _PixelationFactor: 0.5
   _ColorEmulationMode: 2
   _FullscreenColorDepth: {x: 256, y: 256, z: 256}
-  _FullscreenDitherDepth: {x: 32, y: 32, z: 32}
+  _FullscreenDitherDepth: {x: 100, y: 100, z: 100}
   _DitheringMatrixSize: 2
   _DitheringScale: 0.5
   _InterlacingSize: 1
@@ -4141,7 +4141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a4c69f7a9d3ea43907b5765229dc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _TextureWarpingFactor: 1
+  _TextureWarpingFactor: 0.21
   _TextureWarpingMode: 0
   _VertexGridResolution: 50
   _VertexWobbleMode: 1
