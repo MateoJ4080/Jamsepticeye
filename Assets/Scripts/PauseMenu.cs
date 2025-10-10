@@ -9,12 +9,11 @@ public class PauseMenu : MonoBehaviour
     void Awake()
     {
         PauseMenuButtons.SetActive(false);
-        pauseAction = InputManager.Instance.Actions.UI.PauseMenu;
     }
 
-    void OnEnable()
+    void Start()
     {
-        pauseAction.performed += PauseOn;
+        pauseAction = InputManager.Instance.Actions.UI.PauseMenu;
     }
 
     void OnDisable()

@@ -9,13 +9,9 @@ public class PlayerInteractor : MonoBehaviour
     private IInteractable closestInteractable;
     private InputAction interactAction;
 
-    void Awake()
+    void Start()
     {
         interactAction = InputManager.Instance.Actions.Player.Interact;
-    }
-
-    void OnEnable()
-    {
         interactAction.performed += OnInteract;
     }
 
