@@ -3,31 +3,26 @@ using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
-
     public GameObject PauseMenuButtons;
-    private InputSystem_Actions controls;
+    private InputAction pauseAction;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         PauseMenuButtons.SetActive(false);
-        controls = new InputSystem_Actions();
+        pauseAction = InputManager.Instance.Actions.UI.PauseMenu;
     }
 
-
-    private void OnEnable()
+    void OnEnable()
     {
-        controls.UI.PauseMenu.performed += PauseOn;
-        controls.UI.Enable();
+        pauseAction.performed += PauseOn;
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
-        controls.UI.PauseMenu.performed -= PauseOn;
-        controls.UI.Disable();
+        pauseAction.performed -= PauseOn;
     }
 
-    private void PauseOn(InputAction.CallbackContext context)
+    void PauseOn(InputAction.CallbackContext context)
     {
         Time.timeScale = 0f;
         PauseMenuButtons.SetActive(true);

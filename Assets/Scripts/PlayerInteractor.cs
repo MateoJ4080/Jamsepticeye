@@ -7,32 +7,31 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
 
     private IInteractable closestInteractable;
-    private InputSystem_Actions controls;
+    private InputAction interactAction;
 
-    private void Awake()
+    void Awake()
     {
-        controls = new();
-        controls.Enable();
+        interactAction = InputManager.Instance.Actions.Player.Interact;
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
-        controls.Player.Interact.performed += OnInteract;
+        interactAction.performed += OnInteract;
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
-        controls.Player.Interact.performed -= OnInteract;
+        interactAction.performed -= OnInteract;
     }
 
-    private void Update()
+    void Update()
     {
         DetectInteractables();
     }
 
-    private void OnInteract(InputAction.CallbackContext callbackContext) => closestInteractable?.Interact();
+    void OnInteract(InputAction.CallbackContext context) => closestInteractable?.Interact();
 
-    private void DetectInteractables()
+    void DetectInteractables()
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, interactRadius, interactableLayer);
         IInteractable nearest = null;
@@ -52,15 +51,9 @@ public class PlayerInteractor : MonoBehaviour
         }
 
         closestInteractable = nearest;
-
-        // This is where the outline enabling should be placed (after iterating all objects and defining the closest to the player)
-
-        // Debug
-        // MonoBehaviour mb = closestInteractable as MonoBehaviour;
-        // if (mb != null) Debug.Log("Closest interactable: " + mb.gameObject.name);
     }
 
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, interactRadius);
