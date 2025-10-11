@@ -1039,3 +1039,4 @@ PlayerSettings:
   androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
   androidVulkanDeviceFilterListAsset: {fileID: 7862867394083496736, guid: 2d7205b740f2a4e40bcc68dd4ad4dfdd, type: 2}
+  d3d12DeviceFilterListAsset: {fileID: 8057108648114842400, guid: 9483837e86e885d449742f1e68c96c7c, type: 2}
