@@ -21,7 +21,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "b6d70d2c63cc12961cf57ab7e04ac91e6d8e802a"
+      "hash": "5384c6e16dec11a5195602e20974981813cd423f"
     },
     "com.seaeees.simple-folder-icon": {
       "version": "https://github.com/SeaeeesSan/SimpleFolderIcon.git?path=Packages/com.seaeees.simple-folder-icon",
