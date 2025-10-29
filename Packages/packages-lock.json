@@ -8,27 +8,27 @@
       "url": "https://packages.unity.com"
     },
     "com.browar.editor-toolbox": {
-      "version": "https://github.com/arimger/Unity-Editor-Toolbox.git#upm",
+      "version": "0.14.2",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0"
       },
-      "hash": "8c7e2e52a86580c990e1581003e837583b0b0e2f"
+      "url": "https://package.openupm.com"
     },
     "com.generalisk.clean-build": {
-      "version": "https://github.com/Generalisk/Unity-CleanBuild.git",
+      "version": "1.1.0",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "5384c6e16dec11a5195602e20974981813cd423f"
+      "url": "https://package.openupm.com"
     },
     "com.seaeees.simple-folder-icon": {
-      "version": "https://github.com/SeaeeesSan/SimpleFolderIcon.git?path=Packages/com.seaeees.simple-folder-icon",
+      "version": "1.2.4",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "61962458dcd75068bd2324cf2ba5fc547d9e1ed8"
+      "url": "https://package.openupm.com"
     },
     "com.unity.2d.animation": {
       "version": "12.0.2",
