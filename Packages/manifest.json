@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.browar.editor-toolbox": "0.14.2",
-    "com.generalisk.clean-build": "1.1.0",
+    "com.generalisk.clean-build": "1.1.2",
     "com.seaeees.simple-folder-icon": "1.2.4",
     "com.unity.ai.navigation": "2.0.9",
     "com.unity.feature.2d": "2.0.1",
