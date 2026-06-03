@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class HealthUI : MonoBehaviour
 {
     [SerializeField] private Health playerHealth;
-    [SerializeField] private Transform heartContainer;
     [SerializeField] private Image[] heartParts; // 0: bottom - 1: top left - 2: top right
 
     void OnEnable()

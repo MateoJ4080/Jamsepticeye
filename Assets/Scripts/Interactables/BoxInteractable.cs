@@ -8,7 +8,6 @@ public class BoxInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        // if (SanitySystem.Instance.currentState == SanitySystem.SanityState.Medium)
         if (!GameManager.Instance.r1_boxMoved) StartCoroutine(MoveTo(targetPos, duration));
     }
 
