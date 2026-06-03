@@ -8,9 +8,9 @@ public class Health : MonoBehaviour
     private int currentHealth;
 
     public int CurrentHealth => currentHealth;
-    public int MaxHealth => maxHealth;
 
     public event Action OnHealthChanged;
+    [SerializeField] private AudioClip takeDamageSFX;
 
     private void Awake()
     {
@@ -20,17 +20,11 @@ public class Health : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
-        Debug.Log($"{gameObject.name} DAMAGED. HP: {currentHealth}");
-
-        if (gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player recieved dmg");
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_PlayerTakeDmg);
-        }
-
+        AudioManager.Instance.PlaySFX(takeDamageSFX);
         if (currentHealth <= 0) Die();
 
         OnHealthChanged?.Invoke();
+        Debug.Log($"{gameObject.name} damaged, HP: {currentHealth}");
     }
 
     private void Die()
