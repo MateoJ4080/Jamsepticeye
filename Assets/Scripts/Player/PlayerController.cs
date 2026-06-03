@@ -47,7 +47,12 @@ public class PlayerController : MonoBehaviour
         controls.Player.Disable();
     }
 
-    private void Update()
+    void Update()
+    {
+        Move();
+    }
+
+    private void Move()
     {
         currentInput = Vector2.SmoothDamp(currentInput, moveInput, ref inputVelocity, smoothTime);
         Vector3 move = new(currentInput.x, 0, currentInput.y);
@@ -67,23 +72,6 @@ public class PlayerController : MonoBehaviour
         transform.rotation = lastRotation;
     }
 
-    private void TryAttack()
-    {
-        if (!canAttack) return;
-
-        animator.SetTrigger("Attack");
-        Vector3 center = transform.position + transform.forward * attackRange / 2f;
-        float radius = attackRange / 2f;
-
-        Collider[] hits = Physics.OverlapSphere(center, radius, enemyLayer);
-        foreach (Collider hit in hits)
-        {
-            if (hit.TryGetComponent<Health>(out var enemyHealth))
-                enemyHealth.TakeDamage(attackDamage);
-        }
-
-        canAttack = false;
-    }
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -95,11 +83,31 @@ public class PlayerController : MonoBehaviour
         TryAttack();
     }
 
-    // Call in one frame of the animation clip - Make sure canAttack is set back to false in Attack()
+    private void TryAttack()
+    {
+        if (!canAttack) return;
+        animator.SetTrigger("Attack");
+        canAttack = false;
+    }
+
+    // Triggered by animation event
     public void OnAttackEnd()
     {
-        Debug.Log("OnAttackEnd");
         canAttack = true;
+    }
+
+    // Triggered by animation event
+    public void DealDamage()
+    {
+        Vector3 center = transform.position + transform.forward * attackRange / 2f;
+        float radius = attackRange / 2f;
+
+        Collider[] hits = Physics.OverlapSphere(center, radius, enemyLayer);
+        foreach (Collider hit in hits)
+        {
+            if (hit.TryGetComponent<Health>(out var enemyHealth))
+                enemyHealth.TakeDamage(attackDamage);
+        }
     }
 
     private void OnDrawGizmosSelected()

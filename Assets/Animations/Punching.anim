@@ -31123,17 +31123,17 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 3.1666667
-    functionName: OnAttackEnd
+  - time: 1.2083334
+    functionName: DealDamage
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 228a83c8941fcee478a2323024a79573, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.1666667
-    functionName: 
+  - time: 2.7083333
+    functionName: OnAttackEnd
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: 228a83c8941fcee478a2323024a79573, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
