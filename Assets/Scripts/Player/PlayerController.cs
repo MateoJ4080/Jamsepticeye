@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 inputVelocity;
     private Quaternion lastRotation;
 
+    private static readonly int SpeedHash = Animator.StringToHash("Speed");
+    private static readonly int AttackHash = Animator.StringToHash("Attack");
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -75,7 +78,7 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        animator.SetFloat("Speed", moveInput.magnitude);
+        animator.SetFloat(SpeedHash, moveInput.magnitude);
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -86,7 +89,7 @@ public class PlayerController : MonoBehaviour
     private void TryAttack()
     {
         if (!canAttack) return;
-        animator.SetTrigger("Attack");
+        animator.SetTrigger(AttackHash);
         canAttack = false;
     }
 
