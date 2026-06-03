@@ -14,8 +14,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private int attackDamage = 1;
     [SerializeField] private LayerMask enemyLayer;
-    private bool canAttack;
+    private bool canAttack = true;
 
+    [SerializeField] Animator animator;
     private Vector2 moveInput;
     private Vector2 currentInput;
     private Vector2 inputVelocity;
@@ -66,11 +67,11 @@ public class PlayerController : MonoBehaviour
         transform.rotation = lastRotation;
     }
 
-    private void Attack()
+    private void TryAttack()
     {
-        // animator.SetTrigger("Attack");
+        if (!canAttack) return;
 
-        // if (canAttack)
+        animator.SetTrigger("Attack");
         Vector3 center = transform.position + transform.forward * attackRange / 2f;
         float radius = attackRange / 2f;
 
@@ -81,13 +82,25 @@ public class PlayerController : MonoBehaviour
                 enemyHealth.TakeDamage(attackDamage);
         }
 
-        // canAttack = false;
+        canAttack = false;
     }
-    public void OnMove(InputAction.CallbackContext context) => moveInput = context.ReadValue<Vector2>();
-    public void OnAttack(InputAction.CallbackContext context) => Attack();
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+        animator.SetFloat("Speed", moveInput.magnitude);
+    }
 
-    // Call in one frame of the animation clip - ¡Make sure canAttack is set back to false in Attack()!
-    public void OnAttackEnd() => canAttack = true;
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        TryAttack();
+    }
+
+    // Call in one frame of the animation clip - Make sure canAttack is set back to false in Attack()
+    public void OnAttackEnd()
+    {
+        Debug.Log("OnAttackEnd");
+        canAttack = true;
+    }
 
     private void OnDrawGizmosSelected()
     {

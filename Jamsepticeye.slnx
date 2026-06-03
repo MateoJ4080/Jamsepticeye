@@ -30,6 +30,7 @@
   <Project Path="Unity.2D.SpriteShape.Runtime.csproj" />
   <Project Path="Unity.VisualScripting.Core.csproj" />
   <Project Path="Toolbox.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
   <Project Path="Unity.VisualScripting.State.Editor.csproj" />
   <Project Path="Autodesk.Fbx.csproj" />
@@ -62,7 +63,6 @@
   <Project Path="Unity.2D.PixelPerfect.Editor.csproj" />
   <Project Path="Unity.ProBuilder.KdTree.csproj" />
   <Project Path="Unity.ProBuilder.AddOns.Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
   <Project Path="Unity.AI.Navigation.csproj" />
