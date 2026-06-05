@@ -4,7 +4,6 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] private Camera cam;
     [SerializeField] private Transform player;
-    [SerializeField] private float smoothTime = 0.3f;
 
     public static CameraController Instance { get; private set; }
     void Awake()

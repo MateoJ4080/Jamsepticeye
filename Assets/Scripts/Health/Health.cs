@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
             {
                 Collider enemyCollider = GetComponent<Collider>();
                 Collider keyCollider = enemy.keyPrefab.GetComponent<Collider>();
-                float dropPosY = enemyCollider.bounds.center.y - enemyCollider.bounds.size.y / 2 + keyCollider.bounds.size.y / 2;
+                float dropPosY = enemyCollider.bounds.center.y;
 
                 Vector3 spawnPos = new(transform.position.x, dropPosY, transform.position.z);
                 Instantiate(enemy.keyPrefab, spawnPos, Quaternion.identity);
@@ -45,13 +45,10 @@ public class Health : MonoBehaviour
 
         if (gameObject.GetComponent<PlayerController>() != null)
         {
-
-
             // animator.SetTrigger("Dead");
             // Leave body on the floor
             StartCoroutine(AudioManager.Instance.PlaySFXAndWait(AudioManager.Instance.SFX_PlayerDeath));
             SceneManager.LoadScene("Level");
-            Debug.Log("[Health] PLAYER DIED");
         }
     }
 }
