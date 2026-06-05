@@ -122,4 +122,9 @@ public class PlayerController : MonoBehaviour
 
         Gizmos.DrawWireSphere(center, radius);
     }
+
+    public void TeleportToX(float value)
+    {
+        transform.position = new(value, transform.position.y, transform.position.z);
+    }
 }
