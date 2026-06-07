@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private int attackDamage = 1;
     [SerializeField] private LayerMask enemyLayer;
-    private bool canAttack = true;
 
     [SerializeField] Animator animator;
     private Vector2 moveInput;
@@ -88,15 +87,7 @@ public class PlayerController : MonoBehaviour
 
     private void TryAttack()
     {
-        if (!canAttack) return;
         animator.SetTrigger(AttackHash);
-        canAttack = false;
-    }
-
-    // Triggered by animation event
-    public void OnAttackEnd()
-    {
-        canAttack = true;
     }
 
     // Triggered by animation event

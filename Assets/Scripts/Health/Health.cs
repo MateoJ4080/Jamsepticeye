@@ -62,6 +62,7 @@ public class Health : MonoBehaviour
     IEnumerator HitFlash()
     {
         if (meshRenderer == null) yield break;
+
         originalColor = meshRenderer.material.color;
 
         meshRenderer.material.color = hitColor;

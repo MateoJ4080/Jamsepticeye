@@ -31130,7 +31130,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.7083333
+  - time: 1.3333334
     functionName: OnAttackEnd
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 228a83c8941fcee478a2323024a79573, type: 3}
