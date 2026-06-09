@@ -96,6 +96,9 @@ public class PlayerController : MonoBehaviour
     private void TryAttack()
     {
         isAttacking = true;
+        currentInput = Vector2.zero;
+        inputVelocity = Vector2.zero;
+
         animator.SetTrigger(AttackHash);
     }
 
