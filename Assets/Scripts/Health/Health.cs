@@ -29,9 +29,14 @@ public class Health : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX(takeDamageSFX);
         StartCoroutine(HitFlash());
+
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
-        if (currentHealth <= 0) Die();
+
         OnHealthChanged?.Invoke();
+
+        if (currentHealth <= 0)
+            Die();
+
         Debug.Log($"{gameObject.name} damaged, HP: {currentHealth}");
     }
 

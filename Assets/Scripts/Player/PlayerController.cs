@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [Header("Combat")]
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private int attackDamage = 1;
+    [SerializeField] private float knockbackDistance = 1;
+    [SerializeField] private float knockbackDuration = 1;
     [SerializeField] private LayerMask enemyLayer;
     private bool isAttacking;
 
@@ -108,6 +110,14 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.TryGetComponent<Health>(out var enemyHealth))
                 enemyHealth.TakeDamage(attackDamage);
+            if (hit.TryGetComponent<EnemyAI>(out var enemy))
+            {
+                var enemyPos = hit.transform.position;
+                var playerPos = transform.position;
+
+                var direction = (enemyPos - new Vector3(playerPos.x, enemyPos.y, playerPos.z)).normalized;
+                StartCoroutine(enemy.Knockback(direction, knockbackDistance, knockbackDuration));
+            }
         }
     }
 

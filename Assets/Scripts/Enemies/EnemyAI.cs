@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -83,7 +84,6 @@ public class EnemyAI : MonoBehaviour
 
     void HandleAttack(float distance)
     {
-        Debug.Log("HandleAttack");
         LookAtPlayer();
 
         if (Time.time - lastAttackTime >= attackCooldown)
@@ -106,12 +106,29 @@ public class EnemyAI : MonoBehaviour
 
     void PerformAttack()
     {
-        Debug.Log("PerformAttack");
         if (player.TryGetComponent<Health>(out var playerHealth))
         {
-            Debug.Log("Health Component");
             playerHealth.TakeDamage(attackDamage);
         }
+    }
+
+    public IEnumerator Knockback(Vector3 direction, float distance, float duration)
+    {
+        agent.enabled = false;
+
+        Vector3 start = transform.position;
+        Vector3 target = start + direction * distance;
+
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            transform.position = Vector3.Lerp(start, target, elapsed / duration);
+            yield return null;
+        }
+
+        agent.enabled = true;
     }
 
     void TransitionToIdle()
