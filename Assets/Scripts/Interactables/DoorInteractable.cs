@@ -22,7 +22,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
 
         if (gameObject.CompareTag("DoorToOutside"))
         {
-            SceneManager.LoadScene("Credits");
+            StartCoroutine(SceneLoader.Instance.LoadSceneFade("Credits"));
             return;
         }
 
