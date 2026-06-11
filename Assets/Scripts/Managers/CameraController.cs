@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform player;
 
     public static CameraController Instance { get; private set; }
+
     void Awake()
     {
         if (Instance != null && Instance != this)
