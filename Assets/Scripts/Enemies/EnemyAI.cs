@@ -157,4 +157,9 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+
+    public void ApplyKnockback(Vector3 direction, float distance, float duration)
+    {
+        StartCoroutine(Knockback(direction, distance, duration));
+    }
 }
