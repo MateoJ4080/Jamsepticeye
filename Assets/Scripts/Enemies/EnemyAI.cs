@@ -162,4 +162,16 @@ public class EnemyAI : MonoBehaviour
     {
         StartCoroutine(Knockback(direction, distance, duration));
     }
+
+    void OnDestroy()
+    {
+        if (dropsKey)
+        {
+            Collider enemyCollider = GetComponent<Collider>();
+            float dropPosY = enemyCollider.bounds.center.y;
+
+            Vector3 spawnPos = new(transform.position.x, dropPosY, transform.position.z);
+            Instantiate(keyPrefab, spawnPos, Quaternion.identity);
+        }
+    }
 }

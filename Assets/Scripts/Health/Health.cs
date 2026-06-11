@@ -30,30 +30,15 @@ public class Health : MonoBehaviour
         AudioManager.Instance.PlaySFX(takeDamageSFX);
         StartCoroutine(HitFlash());
 
-        currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
-
         OnHealthChanged?.Invoke();
 
-        if (currentHealth <= 0)
-            Die();
-
-        Debug.Log($"{gameObject.name} damaged, HP: {currentHealth}");
+        currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
+        if (currentHealth <= 0) Die();
     }
 
     private void Die()
     {
-        if (gameObject.TryGetComponent(out EnemyAI enemy))
-        {
-            if (enemy.dropsKey)
-            {
-                Collider enemyCollider = GetComponent<Collider>();
-                float dropPosY = enemyCollider.bounds.center.y;
-
-                Vector3 spawnPos = new(transform.position.x, dropPosY, transform.position.z);
-                Instantiate(enemy.keyPrefab, spawnPos, Quaternion.identity);
-            }
-            Destroy(gameObject);
-        }
+        if (TryGetComponent<EnemyAI>(out _)) Destroy(gameObject);
 
         if (gameObject.GetComponent<PlayerController>() != null)
         {
@@ -64,7 +49,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    IEnumerator HitFlash()
+    private IEnumerator HitFlash()
     {
         if (meshRenderer == null) yield break;
 
