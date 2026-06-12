@@ -148,7 +148,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1569953942}
   - {fileID: 1782119302}
   m_Father: {fileID: 1125417666}
   m_LocalEulerAnglesHint: {x: 0, y: -0.114, z: 0}
@@ -3589,12 +3588,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569953941}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.84, y: 2.534, z: 1.21}
+  m_LocalRotation: {x: 0, y: -0.99996585, z: -0, w: -0.008273305}
+  m_LocalPosition: {x: 0.17999968, y: 2.534, z: -1.2071875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 64267463}
+  m_Father: {fileID: 1782119302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1569953943
 Light:
@@ -5139,6 +5138,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fa5fde0dac5700743a8ec975b6d64bf4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 252687973}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fa5fde0dac5700743a8ec975b6d64bf4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1569953942}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa5fde0dac5700743a8ec975b6d64bf4, type: 3}
       insertIndex: -1
@@ -6138,11 +6140,15 @@ PrefabInstance:
       objectReference: {fileID: 1334158285}
     - target: {fileID: 2941015481043832471, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: moveSpeed
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2941015481043832471, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: attackRange
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941015481043832471, guid: 65a74d18000027f419529c047275353f, type: 3}
+      propertyPath: attackCooldown
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2941015481043832471, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: detectionRange
@@ -6408,6 +6414,10 @@ PrefabInstance:
     - target: {fileID: 7108677524712731742, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.9975567
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292026386358034218, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
+      propertyPath: attackRange
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 7292026386358034218, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: attackDamage

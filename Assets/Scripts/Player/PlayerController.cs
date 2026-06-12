@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -7,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float smoothTime = 0.1f;
-    private CharacterController characterController;
+    private CharacterController cc;
     private InputSystem_Actions controls;
 
     [Header("Combat")]
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        characterController = GetComponent<CharacterController>();
+        cc = GetComponent<CharacterController>();
         controls = new InputSystem_Actions();
 
         lastRotation = transform.rotation;
@@ -65,7 +66,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new(currentInput.x, 0, currentInput.y);
         if (move.magnitude > 1f) move.Normalize();
 
-        characterController.Move(speed * Time.deltaTime * move);
+        cc.Move(speed * Time.deltaTime * move);
 
         if (move.x != 0)
         {
@@ -105,8 +106,8 @@ public class PlayerController : MonoBehaviour
     // Triggered by animation event
     public void DealDamage()
     {
-        Vector3 center = transform.position + transform.forward * attackRange / 2f;
-        float radius = attackRange / 2f;
+        Vector3 center = transform.position + cc.center + transform.forward * (attackRange * 0.5f);
+        float radius = attackRange * 0.5f;
 
         Collider[] hits = Physics.OverlapSphere(center, radius, enemyLayer);
         foreach (Collider hit in hits)
@@ -128,8 +129,9 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
 
-        Vector3 center = transform.position + transform.forward * attackRange / 2f;
-        float radius = attackRange / 2f;
+        if (cc == null) cc = GetComponent<CharacterController>(); // For the editor
+        Vector3 center = transform.position + cc.center + transform.forward * (attackRange * 0.5f);
+        float radius = attackRange * 0.5f;
 
         Gizmos.DrawWireSphere(center, radius);
     }
