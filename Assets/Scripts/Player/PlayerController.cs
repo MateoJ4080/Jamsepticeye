@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
                 var enemyPos = hit.transform.position;
                 var playerPos = transform.position;
 
-                var direction = (enemyPos - new Vector3(playerPos.x, enemyPos.y, playerPos.z)).normalized;
+                var direction = (enemyPos - new Vector3(playerPos.x, enemyPos.y, enemyPos.z)).normalized;
                 enemy.ApplyKnockback(direction, knockbackDistance, knockbackDuration);
             }
         }
