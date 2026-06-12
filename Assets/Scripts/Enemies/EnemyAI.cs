@@ -114,7 +114,9 @@ public class EnemyAI : MonoBehaviour
 
     public IEnumerator Knockback(Vector3 direction, float distance, float duration)
     {
-        agent.enabled = false;
+        if (agent == null || !agent.isActiveAndEnabled) yield break;
+
+        agent.isStopped = false;
 
         Vector3 start = transform.position;
         Vector3 target = start + direction * distance;
@@ -128,7 +130,7 @@ public class EnemyAI : MonoBehaviour
             yield return null;
         }
 
-        agent.enabled = true;
+        agent.isStopped = true;
     }
 
     void TransitionToIdle()
