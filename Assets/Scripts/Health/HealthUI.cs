@@ -21,7 +21,7 @@ public class HealthUI : MonoBehaviour
     {
         for (int i = 0; i < heartParts.Length; i++)
         {
-            heartParts[i].enabled = i < playerHealth.CurrentHealth;
+            heartParts[i].enabled = i < playerHealth.CurrentHealth - 1;
         }
     }
 }
