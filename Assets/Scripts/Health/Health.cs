@@ -16,13 +16,15 @@ public class Health : MonoBehaviour
     [Header("Hit Flash")]
     [SerializeField] private Color hitColor = Color.white;
     [SerializeField] private float hitDuration = 0.1f;
-    private Renderer meshRenderer;
-    private Color originalColor;
+    private Renderer[] renderers;
+    private Color[] originalColors;
 
     private void Awake()
     {
         currentHealth = maxHealth;
-        meshRenderer = GetComponent<Renderer>();
+
+        renderers = GetComponentsInChildren<Renderer>();
+        originalColors = new Color[renderers.Length];
     }
 
     public void TakeDamage(int amount)
@@ -51,12 +53,19 @@ public class Health : MonoBehaviour
 
     private IEnumerator HitFlash()
     {
-        if (meshRenderer == null) yield break;
+        if (renderers.Length == 0) yield break;
 
-        originalColor = meshRenderer.material.color;
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            originalColors[i] = renderers[i].material.color;
+            renderers[i].material.color = hitColor;
+        }
 
-        meshRenderer.material.color = hitColor;
         yield return new WaitForSeconds(hitDuration);
-        meshRenderer.material.color = originalColor;
+
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            renderers[i].material.color = originalColors[i];
+        }
     }
 }
