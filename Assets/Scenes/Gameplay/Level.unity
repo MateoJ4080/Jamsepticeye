@@ -816,6 +816,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 738511039}
     m_Modifications:
+    - target: {fileID: 855754989656578020, guid: 65a74d18000027f419529c047275353f, type: 3}
+      propertyPath: takeDamageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 60b27abd899250845bf5e2ee9cee702a, type: 3}
     - target: {fileID: 926234378372875146, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: m_Speed
       value: 1
@@ -5957,6 +5961,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 738511039}
     m_Modifications:
+    - target: {fileID: 855754989656578020, guid: 65a74d18000027f419529c047275353f, type: 3}
+      propertyPath: takeDamageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 60b27abd899250845bf5e2ee9cee702a, type: 3}
     - target: {fileID: 926234378372875146, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: m_Speed
       value: 1
@@ -6120,6 +6128,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 738511039}
     m_Modifications:
+    - target: {fileID: 855754989656578020, guid: 65a74d18000027f419529c047275353f, type: 3}
+      propertyPath: takeDamageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 60b27abd899250845bf5e2ee9cee702a, type: 3}
     - target: {fileID: 2941015481043832471, guid: 65a74d18000027f419529c047275353f, type: 3}
       propertyPath: player
       value: 
