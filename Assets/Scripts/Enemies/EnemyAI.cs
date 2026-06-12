@@ -163,7 +163,7 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(Knockback(direction, distance, duration));
     }
 
-    void OnDestroy()
+    public void Die()
     {
         if (dropsKey)
         {
