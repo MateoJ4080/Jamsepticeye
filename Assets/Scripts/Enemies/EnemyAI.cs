@@ -173,5 +173,6 @@ public class EnemyAI : MonoBehaviour
             Vector3 spawnPos = new(transform.position.x, dropPosY, transform.position.z);
             Instantiate(keyPrefab, spawnPos, Quaternion.identity);
         }
+        Destroy(gameObject);
     }
 }
