@@ -67,8 +67,9 @@ public class EnemyAI : MonoBehaviour
 
     void HandleIdle(float distance)
     {
+        agent.isStopped = true;
         if (distance <= detectionRange)
-            TransitionToChase();
+            currentState = State.Chase;
     }
 
     void HandleChase(float distance)
@@ -77,13 +78,14 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position);
 
         if (distance <= attackRange)
-            TransitionToAttack();
+            currentState = State.Attack;
         else if (distance > detectionRange)
-            TransitionToIdle();
+            currentState = State.Idle;
     }
 
     void HandleAttack(float distance)
     {
+        agent.isStopped = true;
         LookAtPlayer();
 
         if (Time.time - lastAttackTime >= attackCooldown)
@@ -93,7 +95,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         if (distance > attackRange)
-            TransitionToChase();
+            currentState = State.Chase;
     }
 
     void LookAtPlayer()
@@ -130,24 +132,6 @@ public class EnemyAI : MonoBehaviour
             yield return null;
         }
 
-        agent.isStopped = true;
-    }
-
-    void TransitionToIdle()
-    {
-        currentState = State.Idle;
-        agent.isStopped = true;
-    }
-
-    void TransitionToChase()
-    {
-        currentState = State.Chase;
-        agent.isStopped = false;
-    }
-
-    void TransitionToAttack()
-    {
-        currentState = State.Attack;
         agent.isStopped = true;
     }
 
