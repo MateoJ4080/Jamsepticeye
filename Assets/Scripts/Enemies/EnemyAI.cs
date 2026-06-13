@@ -33,7 +33,7 @@ public class EnemyAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = moveSpeed;
-        agent.stoppingDistance = attackRange;
+        agent.stoppingDistance = attackRange - 0.2f;
 
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player").transform;
