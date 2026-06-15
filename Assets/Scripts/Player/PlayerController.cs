@@ -141,4 +141,9 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = new(value, transform.position.y, transform.position.z);
     }
+
+    public void Footstep()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_Footstep);
+    }
 }
