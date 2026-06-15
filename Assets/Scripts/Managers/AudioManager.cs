@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip SFX_KeyGrab;
     public AudioClip SFX_PlayerDeath;
     public AudioClip SFX_PlayerTakeDmg;
+    public AudioClip SFX_Swing;
 
     private void Awake()
     {
@@ -28,10 +29,15 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip);
     }
 
-
     public IEnumerator PlaySFXAndWait(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
         yield return new WaitForSeconds(clip.length);
+    }
+
+    public IEnumerator PlaySoundDelayed(AudioClip clip, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        sfxSource.PlayOneShot(clip);
     }
 }

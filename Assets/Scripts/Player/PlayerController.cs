@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
         currentInput = Vector2.zero;
         inputVelocity = Vector2.zero;
 
+        StartCoroutine(AudioManager.Instance.PlaySoundDelayed(AudioManager.Instance.SFX_Swing, 0.19f));
         animator.SetTrigger(AttackHash);
     }
 
