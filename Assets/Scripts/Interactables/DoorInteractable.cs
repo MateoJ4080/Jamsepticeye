@@ -20,6 +20,8 @@ public class DoorInteractable : MonoBehaviour, IInteractable
             return;
         }
 
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_DoorUnlock);
+
         if (gameObject.CompareTag("DoorToOutside"))
         {
             StartCoroutine(SceneLoader.Instance.LoadSceneFade("Credits"));
@@ -28,7 +30,6 @@ public class DoorInteractable : MonoBehaviour, IInteractable
 
         isLocked = false;
 
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_DoorUnlock);
 
         CharacterController cc = player.GetComponent<CharacterController>();
         cc.enabled = false;
