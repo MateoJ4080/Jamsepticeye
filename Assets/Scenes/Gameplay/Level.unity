@@ -5391,43 +5391,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9178126
+      value: 3.831
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1233692
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0323286
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.18102323
+      value: -0.29575506
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.75942147
+      value: 0.33831128
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3760995
+      value: -0.14612044
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4990579
+      value: -0.8813191
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 40.567
+      value: -27.237
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -53.542
+      value: -34.993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 210.939
+      value: 151.633
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -5774,7 +5774,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d41b4c8d0e421c84f8e8c5d6272e70a6, type: 2}
+      objectReference: {fileID: 2100000, guid: 0df67594c1579a340997442ce486f9ec, type: 2}
     - target: {fileID: 919132149155446097, guid: 2a4254ab00ffda141a2d08cb970758eb, type: 3}
       propertyPath: m_Name
       value: Stool
@@ -6421,7 +6421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292026386358034218, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: attackDamage
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7292026386358034218, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: knockbackDistance
