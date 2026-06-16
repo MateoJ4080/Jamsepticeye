@@ -12,10 +12,12 @@ public class SceneLoader : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            Instance = this;
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(this);
+
+        if (SceneManager.GetActiveScene().name == "Level") StartCoroutine(FadeManager.Instance.FadeIn());
     }
 
     public IEnumerator LoadSceneFade(string sceneName)

@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(2);
+        StartCoroutine(SceneLoader.Instance.LoadSceneFade("Level"));
         menuSource.Stop();
     }
 
