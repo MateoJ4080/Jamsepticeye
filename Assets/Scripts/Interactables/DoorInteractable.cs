@@ -16,7 +16,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     {
         if (isLocked && !GameManager.Instance.r3_hasKeyToOutside)
         {
-            // Play LockedDoorSFX
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_DoorLocked);
             return;
         }
 

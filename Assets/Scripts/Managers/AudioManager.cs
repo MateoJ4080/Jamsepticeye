@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip SFX_PlayerTakeDmg;
     public AudioClip SFX_Swing;
     public AudioClip SFX_Footstep;
+    public AudioClip SFX_DoorLocked;
 
     private void Awake()
     {
