@@ -33,7 +33,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
 
         CharacterController cc = player.GetComponent<CharacterController>();
         cc.enabled = false;
-        player.position = new Vector3(targetPoint.position.x, player.position.y, targetPoint.position.z);
+        player.position = new Vector3(targetPoint.position.x, player.position.y, player.position.z);
         cc.enabled = true;
     }
 }
