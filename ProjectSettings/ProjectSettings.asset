@@ -1025,11 +1025,11 @@ PlayerSettings:
     Standalone: 1
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: bd1cb126-c9fd-43b4-adc2-51eafae65c0f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Jamsepticeye
+  organizationId: mateobssd
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
