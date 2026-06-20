@@ -1340,19 +1340,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba5ad02f48996b446b37ccdc6875a005, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5139138
+      value: 0.5179738
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba5ad02f48996b446b37ccdc6875a005, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5139138
+      value: -0.5179739
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba5ad02f48996b446b37ccdc6875a005, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.48568773
+      value: -0.4813554
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba5ad02f48996b446b37ccdc6875a005, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.48568785
+      value: -0.48135564
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba5ad02f48996b446b37ccdc6875a005, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1364,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba5ad02f48996b446b37ccdc6875a005, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -86.765
+      value: -85.803
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ba5ad02f48996b446b37ccdc6875a005, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2505,7 +2505,7 @@ Transform:
   m_GameObject: {fileID: 1104488156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.422, y: -0.0297, z: -1.507}
+  m_LocalPosition: {x: 28.382, y: 0.028, z: -1.547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3619,7 +3619,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
   m_Intensity: 1
   m_Range: 5.7
   m_SpotAngle: 30
@@ -4318,7 +4318,7 @@ Transform:
   m_GameObject: {fileID: 1632661034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.35, y: 0, z: -1.507}
+  m_LocalPosition: {x: 12.199, y: 0, z: -1.506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6426,15 +6426,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3384255314340631754, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.208
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 3384255314340631754, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0159818
+      value: -1.032
       objectReference: {fileID: 0}
     - target: {fileID: 3384255314340631754, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.2066145
+      value: 2.571
       objectReference: {fileID: 0}
     - target: {fileID: 3384255314340631754, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6475,6 +6475,18 @@ PrefabInstance:
     - target: {fileID: 4166495062527169317, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.06602409
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315064479845872532, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
+      propertyPath: m_Height
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315064479845872532, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
+      propertyPath: m_Radius
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315064479845872532, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
+      propertyPath: m_Center.z
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5315064479845872532, guid: ae4f4c99576f0bc4b9e389c36f588e7e, type: 3}
       propertyPath: m_StepOffset
