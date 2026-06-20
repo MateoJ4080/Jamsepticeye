@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         controls.Player.Disable();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }
