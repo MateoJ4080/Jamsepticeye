@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "com.browar.editor-toolbox": "0.14.2",
+    "com.browar.editor-toolbox": "0.14.4",
     "com.seaeees.simple-folder-icon": "1.2.4",
-    "com.unity.ai.navigation": "2.0.10",
+    "com.unity.ai.navigation": "2.0.13",
     "com.unity.feature.2d": "2.0.2",
     "com.unity.feature.characters-animation": "1.0.0",
     "com.unity.feature.development": "1.0.2",
